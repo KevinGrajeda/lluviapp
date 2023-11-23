@@ -1,13 +1,19 @@
+import { exec } from 'child_process';
 import fs from 'fs';
 import path from 'path';
 
 const dataFilePath = path.join(process.cwd(), 'sensorData.json');
 const maxDataEntries = 10;
 
+//post request to save data and read the response
+
+
 export async function POST(req: Request) {
   const { temperature, humidity } = await req.json();
-  console.log(temperature, humidity);
-  const newData = { temperature, humidity };
+  const { lluviaAhora, lluviaEnUnaHora } = await predecir(temperature, humidity);
+  
+  console.log(temperature, humidity, lluviaAhora, lluviaEnUnaHora);
+  const newData = { temperature, humidity, lluviaAhora, lluviaEnUnaHora};
 
   // Read existing data from the file
   let existingData = [];
@@ -25,11 +31,28 @@ export async function POST(req: Request) {
 
   fs.writeFileSync(dataFilePath, JSON.stringify(existingData, null, 2));
 
+
+
   return new Response('hola', {
     status: 200,
   });
 }
 
+function predecir(temperature: number, humidity: number): Promise<{ lluviaAhora: boolean, lluviaEnUnaHora: boolean }> {
+  return new Promise((resolve, reject) => {
+    exec(`python3 predecir.py ${temperature} ${humidity}`, (err, stdout, stderr) => {
+      if (err) {
+        console.error(err);
+        reject(err);
+      } else {
+        const resultado = stdout.trim().split(',');
+        const lluviaAhora = resultado[0] === 'True';
+        const lluviaEnUnaHora = resultado[1] === 'True';
+        resolve({ lluviaAhora, lluviaEnUnaHora });
+      }
+    });
+  });
+}
 export async function GET() {
   let sensorData = [];
   try {

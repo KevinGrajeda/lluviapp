@@ -1,42 +1,62 @@
 [
   {
-    "temperature": 25,
-    "humidity": 59
+    "temperature": 20,
+    "humidity": 80,
+    "lluviaAhora": false,
+    "lluviaEnUnaHora": false
   },
   {
-    "temperature": 25,
-    "humidity": 54
+    "temperature": 20,
+    "humidity": 80,
+    "lluviaAhora": false,
+    "lluviaEnUnaHora": false
   },
   {
-    "temperature": 25,
-    "humidity": 48
+    "temperature": 20,
+    "humidity": 80,
+    "lluviaAhora": false,
+    "lluviaEnUnaHora": false
   },
   {
-    "temperature": 25,
-    "humidity": 46
+    "temperature": 20,
+    "humidity": 80,
+    "lluviaAhora": true,
+    "lluviaEnUnaHora": true
   },
   {
-    "temperature": 25,
-    "humidity": 45
+    "temperature": 30,
+    "humidity": 80,
+    "lluviaAhora": true,
+    "lluviaEnUnaHora": true
   },
   {
-    "temperature": 25,
-    "humidity": 43
+    "temperature": 30,
+    "humidity": 20,
+    "lluviaAhora": false,
+    "lluviaEnUnaHora": false
   },
   {
-    "temperature": 25,
-    "humidity": 42
+    "temperature": 20,
+    "humidity": 80,
+    "lluviaAhora": true,
+    "lluviaEnUnaHora": true
   },
   {
-    "temperature": 25,
-    "humidity": 40
+    "temperature": 20,
+    "humidity": 70,
+    "lluviaAhora": false,
+    "lluviaEnUnaHora": true
   },
   {
-    "temperature": 25,
-    "humidity": 38
+    "temperature": 20,
+    "humidity": 50,
+    "lluviaAhora": true,
+    "lluviaEnUnaHora": false
   },
   {
-    "temperature": 24,
-    "humidity": 37
+    "temperature": 20,
+    "humidity": 30,
+    "lluviaAhora": false,
+    "lluviaEnUnaHora": false
   }
 ]
