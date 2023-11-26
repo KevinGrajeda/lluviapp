@@ -5,18 +5,25 @@ import 'chart.js/auto';
 type SensorData = {
   temperature: number;
   humidity: number;
+  lluviaAhora: boolean;
+  lluviaEnUnaHora: boolean;
+  timestamp: number;
 };
+
 
 type GraficaTemperaturaProps = {
   sensorData: SensorData[];
 };
 
 const GraficaTemperatura: React.FC<GraficaTemperaturaProps> = ({ sensorData }) => {
-  // Crear timestamps para cada dato basado en el índice
-  const timestamps = sensorData.map((_, index) => `-${(index) * 5}`).reverse();
 
   // Extraer temperaturas desde sensorData
   const temperatures = sensorData.map(data => data.temperature);
+
+  const timestamps = sensorData.map(data => {
+    const date = new Date(data.timestamp);
+    return `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+  })
 
   // Definir los datos para el gráfico (solo temperatura)
   const chartData = {
@@ -32,7 +39,7 @@ const GraficaTemperatura: React.FC<GraficaTemperaturaProps> = ({ sensorData }) =
         pointBackgroundColor: 'rgba(244, 63, 94, 1)',
         pointHoverBackgroundColor: 'rgba(244, 63, 94, 1)',
         pointHoverBorderColor: 'rgba(244, 63, 94, 1)',
-        pointRadius: 5,
+        pointRadius: 1,
         pointHoverRadius: 8,
 
       },
@@ -50,9 +57,6 @@ const GraficaTemperatura: React.FC<GraficaTemperaturaProps> = ({ sensorData }) =
       y: {
         min: 10,
         max: 40,
-        ticks: {
-          stepSize: 5,
-        },
       },
     },
     plugins: {

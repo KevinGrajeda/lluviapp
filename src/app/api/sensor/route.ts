@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 const dataFilePath = path.join(process.cwd(), 'sensorData.json');
-const maxDataEntries = 10;
+const maxDataEntries = 30;
 
 //post request to save data and read the response
 
@@ -11,17 +11,15 @@ const maxDataEntries = 10;
 export async function POST(req: Request) {
   const { temperature, humidity } = await req.json();
   const { lluviaAhora, lluviaEnUnaHora } = await predecir(temperature, humidity);
-  
-  console.log(temperature, humidity, lluviaAhora, lluviaEnUnaHora);
-  const newData = { temperature, humidity, lluviaAhora, lluviaEnUnaHora};
 
-  // Read existing data from the file
+  console.log(temperature, humidity, lluviaAhora, lluviaEnUnaHora);
+  const newData = { temperature, humidity, lluviaAhora, lluviaEnUnaHora, timestamp: Date.now() };
+
   let existingData = [];
   try {
     const fileContent = fs.readFileSync(dataFilePath, 'utf-8');
     existingData = JSON.parse(fileContent);
   } catch (error) {
-    // Handle errors if the file doesn't exist or is not valid JSON
   }
 
   existingData.push(newData);
@@ -33,7 +31,7 @@ export async function POST(req: Request) {
 
 
 
-  return new Response('hola', {
+  return new Response(JSON.stringify({ lluviaAhora, lluviaEnUnaHora }), {
     status: 200,
   });
 }

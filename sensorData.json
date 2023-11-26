@@ -1,62 +1,212 @@
 [
   {
-    "temperature": 20,
-    "humidity": 80,
+    "temperature": 11,
+    "humidity": 51,
     "lluviaAhora": false,
-    "lluviaEnUnaHora": false
+    "lluviaEnUnaHora": false,
+    "timestamp": 1700834842705
   },
   {
-    "temperature": 20,
-    "humidity": 80,
+    "temperature": 11,
+    "humidity": 51,
     "lluviaAhora": false,
-    "lluviaEnUnaHora": false
+    "lluviaEnUnaHora": false,
+    "timestamp": 1700834846159
   },
   {
-    "temperature": 20,
-    "humidity": 80,
+    "temperature": 11,
+    "humidity": 51,
     "lluviaAhora": false,
-    "lluviaEnUnaHora": false
+    "lluviaEnUnaHora": false,
+    "timestamp": 1700834849352
   },
   {
-    "temperature": 20,
-    "humidity": 80,
-    "lluviaAhora": true,
-    "lluviaEnUnaHora": true
-  },
-  {
-    "temperature": 30,
-    "humidity": 80,
-    "lluviaAhora": true,
-    "lluviaEnUnaHora": true
-  },
-  {
-    "temperature": 30,
-    "humidity": 20,
+    "temperature": 11,
+    "humidity": 51,
     "lluviaAhora": false,
-    "lluviaEnUnaHora": false
+    "lluviaEnUnaHora": false,
+    "timestamp": 1700834852689
   },
   {
-    "temperature": 20,
-    "humidity": 80,
-    "lluviaAhora": true,
-    "lluviaEnUnaHora": true
-  },
-  {
-    "temperature": 20,
-    "humidity": 70,
+    "temperature": 12,
+    "humidity": 51,
     "lluviaAhora": false,
-    "lluviaEnUnaHora": true
+    "lluviaEnUnaHora": false,
+    "timestamp": 1700834856325
   },
   {
-    "temperature": 20,
+    "temperature": 11,
+    "humidity": 51,
+    "lluviaAhora": false,
+    "lluviaEnUnaHora": false,
+    "timestamp": 1700834859555
+  },
+  {
+    "temperature": 11,
+    "humidity": 51,
+    "lluviaAhora": false,
+    "lluviaEnUnaHora": false,
+    "timestamp": 1700834863117
+  },
+  {
+    "temperature": 11,
+    "humidity": 51,
+    "lluviaAhora": false,
+    "lluviaEnUnaHora": false,
+    "timestamp": 1700834866766
+  },
+  {
+    "temperature": 11,
+    "humidity": 51,
+    "lluviaAhora": false,
+    "lluviaEnUnaHora": false,
+    "timestamp": 1700834870045
+  },
+  {
+    "temperature": 11,
+    "humidity": 51,
+    "lluviaAhora": false,
+    "lluviaEnUnaHora": false,
+    "timestamp": 1700834873279
+  },
+  {
+    "temperature": 12,
+    "humidity": 51,
+    "lluviaAhora": false,
+    "lluviaEnUnaHora": false,
+    "timestamp": 1700834876786
+  },
+  {
+    "temperature": 11,
+    "humidity": 51,
+    "lluviaAhora": false,
+    "lluviaEnUnaHora": false,
+    "timestamp": 1700834880230
+  },
+  {
+    "temperature": 11,
+    "humidity": 51,
+    "lluviaAhora": false,
+    "lluviaEnUnaHora": false,
+    "timestamp": 1700834883536
+  },
+  {
+    "temperature": 11,
+    "humidity": 51,
+    "lluviaAhora": false,
+    "lluviaEnUnaHora": false,
+    "timestamp": 1700834886985
+  },
+  {
+    "temperature": 11,
+    "humidity": 51,
+    "lluviaAhora": false,
+    "lluviaEnUnaHora": false,
+    "timestamp": 1700834890495
+  },
+  {
+    "temperature": 14,
     "humidity": 50,
-    "lluviaAhora": true,
-    "lluviaEnUnaHora": false
+    "lluviaAhora": false,
+    "lluviaEnUnaHora": false,
+    "timestamp": 1700834893900
   },
   {
-    "temperature": 20,
-    "humidity": 30,
+    "temperature": 12,
+    "humidity": 51,
     "lluviaAhora": false,
-    "lluviaEnUnaHora": false
+    "lluviaEnUnaHora": false,
+    "timestamp": 1700834897192
+  },
+  {
+    "temperature": 11,
+    "humidity": 52,
+    "lluviaAhora": false,
+    "lluviaEnUnaHora": false,
+    "timestamp": 1700834900549
+  },
+  {
+    "temperature": 11,
+    "humidity": 51,
+    "lluviaAhora": false,
+    "lluviaEnUnaHora": false,
+    "timestamp": 1700834903925
+  },
+  {
+    "temperature": 13,
+    "humidity": 50,
+    "lluviaAhora": false,
+    "lluviaEnUnaHora": false,
+    "timestamp": 1700834907569
+  },
+  {
+    "temperature": 11,
+    "humidity": 51,
+    "lluviaAhora": false,
+    "lluviaEnUnaHora": false,
+    "timestamp": 1700834913092
+  },
+  {
+    "temperature": 11,
+    "humidity": 53,
+    "lluviaAhora": false,
+    "lluviaEnUnaHora": false,
+    "timestamp": 1700834930353
+  },
+  {
+    "temperature": 12,
+    "humidity": 52,
+    "lluviaAhora": false,
+    "lluviaEnUnaHora": false,
+    "timestamp": 1700834937516
+  },
+  {
+    "temperature": 11,
+    "humidity": 52,
+    "lluviaAhora": false,
+    "lluviaEnUnaHora": false,
+    "timestamp": 1700834947102
+  },
+  {
+    "temperature": 11,
+    "humidity": 52,
+    "lluviaAhora": false,
+    "lluviaEnUnaHora": false,
+    "timestamp": 1700834956795
+  },
+  {
+    "temperature": 11,
+    "humidity": 53,
+    "lluviaAhora": false,
+    "lluviaEnUnaHora": false,
+    "timestamp": 1700834978039
+  },
+  {
+    "temperature": 11,
+    "humidity": 53,
+    "lluviaAhora": false,
+    "lluviaEnUnaHora": false,
+    "timestamp": 1700834994005
+  },
+  {
+    "temperature": 11,
+    "humidity": 55,
+    "lluviaAhora": false,
+    "lluviaEnUnaHora": false,
+    "timestamp": 1700835001239
+  },
+  {
+    "temperature": 11,
+    "humidity": 53,
+    "lluviaAhora": false,
+    "lluviaEnUnaHora": false,
+    "timestamp": 1700835008105
+  },
+  {
+    "temperature": 11,
+    "humidity": 53,
+    "lluviaAhora": false,
+    "lluviaEnUnaHora": false,
+    "timestamp": 1700835011896
   }
 ]

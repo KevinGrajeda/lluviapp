@@ -5,6 +5,9 @@ import 'chart.js/auto';
 type SensorData = {
   temperature: number;
   humidity: number;
+  lluviaAhora: boolean;
+  lluviaEnUnaHora: boolean;
+  timestamp: number;
 };
 
 type GraficaHumedadProps = {
@@ -12,11 +15,14 @@ type GraficaHumedadProps = {
 };
 
 const GraficaHumedad: React.FC<GraficaHumedadProps> = ({ sensorData }) => {
-  // Crear timestamps para cada dato basado en el índice
-  const timestamps = sensorData.map((_, index) => `-${(index) * 5}`).reverse();
 
   // Extraer temperaturas desde sensorData
-  const humedades = sensorData.map(data => data.humidity);
+  //reverse
+  const humedades = sensorData.map(data => data.humidity)
+  const timestamps = sensorData.map(data => {
+    const date = new Date(data.timestamp);
+    return `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+  })
 
 
   const chartData = {
@@ -32,7 +38,7 @@ const GraficaHumedad: React.FC<GraficaHumedadProps> = ({ sensorData }) => {
         pointBackgroundColor: 'rgba(20, 184, 166, 1)',
         pointHoverBackgroundColor: 'rgba(20, 184, 166, 1)',
         pointHoverBorderColor: 'rgba(20, 184, 166, 1)',
-        pointRadius: 5,
+        pointRadius: 1,
         pointHoverRadius: 8,
 
       },
@@ -51,9 +57,6 @@ const GraficaHumedad: React.FC<GraficaHumedadProps> = ({ sensorData }) => {
         beginAtZero: false,
         min: 0,
         max: 100,
-        ticks: {
-          stepSize: 5,
-        },
       },
     },
     plugins: {
