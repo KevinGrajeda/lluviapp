@@ -23,8 +23,8 @@ dht_sensor = dht.DHT11(machine.Pin(dht_pin))
 api_url = "https://orange-space-waffle-q4gxxp5w6ww29664-3000.app.github.dev/api/sensor"
 
 # Wi-Fi
-ssid = "Totalplay-70AA"
-password = "70AAD2FADGnqMk6s"
+ssid = "red"
+password = "contraseña"
 
 connect_to_wifi(ssid, password)
 
